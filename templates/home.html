@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Hits and Flops</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-lg-0">
+        <a class="navbar-brand" href="/">Spotify Bangers</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Data Visualization</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/barcharts">Hits and Flops Analysis</a>
+                        <a class="dropdown-item" href="/hitwords">Common Words</a>
+                        <a class="dropdown-item" href="/barcharts2">Top Performers Analysis</a>
+                        <a class="dropdown-item" href="/billboard">Billboard Playlist</a>
+                        <a class="dropdown-item" href="/newmusic">New Music Playlist</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contributors">Contributors</a>
+                </li>
+            </ul>
+        </div>
+    </nav>   
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <div><img src="/static/png/STL.png" style="width:80px; vertical-align:sub;"/>
+                <h1 class="display-4">Spotify Hits! </h1>
+            </div>
+            <p class="lead">What makes a hit? Can we use spotify song metadata to predict future chart toppers?</p>
+            
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/IvlasC9nvu8" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+            </iframe>
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid bg-4 text-center">
+        <h3>Result Previews</h3>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <h6>Tableau Analysis</h6>
+                <a target="_blank" href="/barcharts">
+                    <img src="/static/png/bars.PNG" class="preview" style="width:100%" alt="Tablaeu Analysis">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <h6>Hitwords </h6>
+                <a target="_blank" href="/hitwords">
+                    <img src="/static/png/hitwords.PNG" class="preview" style="width:100%" alt="Hitwords Analysis">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <h6>Tableau Analysis</h6>
+                <a target="_blank" href="/barcharts2">
+                    <img src="/static/png/top_performer.PNG" class="preview" style="width:100%" alt="Tablaeu Analysis">
+                </a>
+            </div>            
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <h6>Billboards Playlist</h6>
+                <a target="_blank" href="/billboard">
+                    <img src="/static/png/billboard.PNG" class="preview" style="width:100%" alt="Billboards Playlist">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <h6>New Music Playlist </h6>
+                <a target="_blank" href="/newmusic">
+                    <img src="/static/png/new_music.PNG" class="preview" style="width:100%" alt="New Music Playlist">
+                </a>
+            </div>          
+        </div>
+        <br>
+        <br>
+    </body>
+    <!-- <div class="col-md-12">
+        <h2>These are our charts that discuss our data</h2>
+        <p>Here is a quick descriptor of the chart</p>
+        <br>
+        <br>
+    </div>
+    <div class="col-md-12">
+        <h2>We can put a Tableau image here maybe</h2>
+        <p>discuss the Tableau image now</p>
+        <br>
+        <br>
+    </div> -->
+
+    <!-- Table for comparing billboard data -->
+    <!-- <div class="col-md-12">
+        <h2>Billboard top 20 vs. Our Model</h2>
+        <div id="billboard-table-area" class="">
+            <table id="billboard-table" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="table-head">Song</th>
+                        <th class="table-head">Artist</th>
+                        <th class="table-head">Hit or Flop?</th>
+                    </tr>
+                </thead>
+                <tbody id="billboard-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+<br>
+<br> -->
+    <!-- Table for comparing new music data -->
+    <!-- <div class="col-md-12">
+        <h2>New Music 20 vs. Our Model</h2>
+        <p>Which songs from the New Music Friday playlist do we think will be successful?</p>
+        <div id="new-music-table-area" class="">
+            <table id="new-music-table" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="table-head">Song</th>
+                        <th class="table-head">Artist</th>
+                        <th class="table-head">Hit or Flop?</th>
+                    </tr>
+                </thead>
+                <tbody id="new-music-table-body"></tbody>
+            </table>
+        </div>
+    </div> -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./static/js/table.js"></script>
+</body>
+
+</html>
